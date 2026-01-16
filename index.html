@@ -3,248 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio - Python G30</title>
+    <title>Dragon Ball Characters</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <a href="#inicio">Mi Portafolio</a>
-                </div>
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <label for="menu-toggle" class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-                <label for="menu-toggle" class="menu-overlay"></label>
-                <ul class="nav-menu">
-                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                    <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
-                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-                    <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Personajes de Dragon Ball</h1>
+        </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="inicio" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Hola, soy <span class="highlight">Desarrollador Python</span></h1>
-                    <p class="hero-subtitle">Creando soluciones innovadoras con código</p>
-                    <div class="hero-buttons">
-                        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-                        <a href="#habilidades" class="btn btn-secondary">Ver Habilidades</a>
-                    </div>
+        <main>
+            <!-- Contenedor de personajes -->
+            <div id="characters-container" class="characters-grid">
+                <!-- Los personajes se cargarán aquí dinámicamente -->
+            </div>
+
+            <!-- Controles de paginación -->
+            <div class="pagination-container">
+                <div class="pagination-info">
+                    <span id="page-info">Página 1 de 1</span>
                 </div>
-                <div class="hero-image">
-                    <div class="image-placeholder">
-                        <i class="fab fa-python"></i>
-                    </div>
+                <div class="pagination-controls">
+                    <button id="btn-first" class="pagination-btn" disabled>⏮ Primero</button>
+                    <button id="btn-prev" class="pagination-btn" disabled>◀ Anterior</button>
+                    <button id="btn-next" class="pagination-btn">Siguiente ▶</button>
+                    <button id="btn-last" class="pagination-btn">⏭ Último</button>
                 </div>
             </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="sobre-mi" class="about">
-            <div class="container">
-                <h2 class="section-title">Sobre Mí</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            Soy un desarrollador apasionado por la programación y la tecnología. 
-                            Especializado en Python y desarrollo web, me encanta crear proyectos 
-                            que resuelvan problemas reales y mejoren la experiencia del usuario.
-                        </p>
-                        <p>
-                            Mi objetivo es seguir aprendiendo y creciendo profesionalmente, 
-                            trabajando en proyectos desafiantes que me permitan aplicar y 
-                            expandir mis conocimientos.
-                        </p>
-                    </div>
-                    <div class="about-image">
-                        <img src="Picture.jpg" alt="Mi foto" class="profile-image">
-                    </div>
-                </div>
+            <!-- Indicador de carga -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Cargando personajes...</p>
             </div>
-        </section>
+        </main>
 
-        <!-- Projects Section -->
-        <section id="proyectos" class="projects">
-            <div class="container">
-                <h2 class="section-title">Mis Proyectos</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Proyecto Web App</h3>
-                            <p>Aplicación web desarrollada con Python y Flask, con funcionalidades completas de CRUD y autenticación de usuarios.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Flask</span>
-                                <span class="tech-tag">HTML/CSS</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            </div>
-                        </div>
-                    </article>
+        <footer>
+            <p>Desarrollado con HTML, CSS y JavaScript</p>
+        </footer>
+    </div>
 
-                    <article class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Análisis de Datos</h3>
-                            <p>Proyecto de análisis de datos utilizando pandas, matplotlib y seaborn para visualización de información.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Pandas</span>
-                                <span class="tech-tag">Matplotlib</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Bot Automatizado</h3>
-                            <p>Bot desarrollado en Python para automatizar tareas repetitivas, mejorando la eficiencia del flujo de trabajo.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Selenium</span>
-                                <span class="tech-tag">API</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Sistema de Gestión</h3>
-                            <p>Sistema completo de gestión con base de datos, interfaz intuitiva y reportes automatizados.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">SQLite</span>
-                                <span class="tech-tag">Tkinter</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="habilidades" class="skills">
-            <div class="container">
-                <h2 class="section-title">Habilidades</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <div class="skill-icon">
-                            <i class="fab fa-python"></i>
-                        </div>
-                        <h3>Python</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                        <p>90%</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-icon">
-                            <i class="fab fa-html5"></i>
-                        </div>
-                        <h3>HTML5</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                        <p>85%</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-icon">
-                            <i class="fab fa-css3-alt"></i>
-                        </div>
-                        <h3>CSS3</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                        <p>80%</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-icon">
-                            <i class="fab fa-js"></i>
-                        </div>
-                        <h3>JavaScript</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
-                        <p>75%</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3>Bases de Datos</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                        <p>85%</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-icon">
-                            <i class="fab fa-git-alt"></i>
-                        </div>
-                        <h3>Git</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                        <p>80%</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Mi Portafolio. Todos los derechos reservados.</p>
-            <p>Desarrollado con <i class="fas fa-heart"></i> usando HTML y CSS</p>
-        </div>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
-
